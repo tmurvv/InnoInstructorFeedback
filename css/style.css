@@ -55,19 +55,35 @@ body {
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 3 * 1rem) / 4) + 2 * 1rem); }
 
-header {
-  background-image: url("");
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/feedbackPointing.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh; }
+  background-position: 85% 12%;
+  background-size: 100%;
+  height: 85vh;
+  opacity: 1; }
+  .header__topline {
+    display: flex; }
+    .header__topline--logo {
+      height: 4rem;
+      opacity: .4; }
+    .header__topline--mainNav {
+      margin-top: 1.5rem;
+      display: flex;
+      list-style: none; }
+      .header__topline--mainNav-item {
+        margin: 0 3rem;
+        color: white; }
 
-.hero {
-  margin-bottom: 3rem;
-  padding: 1rem;
-  border: .5rem solid #00d8d6; }
+.header__hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; }
 
-.btn {
+.header__.btn {
   padding: 1.5rem;
   border-radius: .3rem;
   margin: 1rem 0;

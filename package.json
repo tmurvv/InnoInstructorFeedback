@@ -1,7 +1,7 @@
 {
-  "name": "webtemplatesass",
+  "name": "InnoTechFeedbackSurvey",
   "version": "1.0.0",
-  "description": "Web template with Sass for Visual Studio Code",
+  "description": "Feedback survey for students regarding instructors and staff",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",

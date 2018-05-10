@@ -1,8 +1,42 @@
-  header {
-    
-    background-image:url("");
+  .header {    
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/feedbackPointing.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
+    background-position: 85% 12%;
+    background-size: 100%;
+    height: 85vh;
+    opacity: 1;
+
+
+
+    &__topline {
+      display: flex;
+
+      &--logo {
+        height: 4rem;
+        opacity: .4;
+       
+      }
+      &--mainNav {
+        margin-top: 1.5rem;
+        display: flex;
+        list-style: none;
+
+        &-item {
+          margin: 0 3rem;
+          color: white;
+
+
+        }
+      }
+    }
   }
+
+
+
+
+
+
+
+
+
+
