@@ -59,29 +59,34 @@ body {
   background-color: #1a2124;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/feedbackPointingCrop.jpg);
   background-repeat: no-repeat;
-  background-position: 25% 75%;
+  background-position: 50% 3%;
   background-size: 100%;
   height: 85vh; }
   .header__topline {
-    display: flex; }
+    display: flex;
+    justify-content: space-between; }
     .header__topline--logo {
       height: 4rem;
       opacity: .4; }
     .header__topline--mainNav {
       margin-top: 1.5rem;
+      flex: 0 0 1;
       display: flex;
       list-style: none; }
       .header__topline--mainNav-item {
-        margin: 0 3rem;
-        color: white; }
+        margin: 0 2rem;
+        color: #ccc; }
 
 .header__hero {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white; }
+  top: 40%;
+  left: 35%;
+  transform: translate(-50%, -50%); }
+  .header__hero--mainText, .header__hero--subText {
+    text-align: center;
+    color: #108dc7;
+    font-size: 280%;
+    font-weight: 300; }
 
 .header__.btn {
   padding: 1.5rem;
