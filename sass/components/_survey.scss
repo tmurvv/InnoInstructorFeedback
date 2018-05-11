@@ -67,18 +67,37 @@
         width: 100%;
         display: flex;
         justify-content: center;
-
+        align-content: center;
+        
         &--btn {
             background-color: $colorPrimary;
+            height: 3rem;
             padding: .5rem 1rem;
             font-size: 140%;
-            border-radius: 10px;
+            border-radius: 15px;
             letter-spacing: 1.3px;
             color: #fff;
-            
             &:hover,
             &:active {
                 transform: scale(1.05);
+            }
+        }
+        &--response {
+            padding: .5rem 1rem;
+            font-weight: 300;
+            font-size: 140%;
+            margin-left: 1rem;
+            border-radius: 15px;
+            transform: translateY(-4px);
+            color: #333;
+            border: 2px outset buttonface;
+            border-image: initial;
+
+            &-success {
+                background-color: #56bf56;
+            }
+            &-fail   {
+                background-color: rgb(247, 11, 11);
             }
         }
     }

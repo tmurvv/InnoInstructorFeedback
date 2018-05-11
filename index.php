@@ -42,7 +42,7 @@
     <section class="survey">
         <h2 class="survey__heading">Final Feedback Survey</h2>
         <h4 class="survey__subHeading">Please give each instructor a rating from 1 to 10, with 1 being poor and 10 being excellent:</h4>
-        <form action="feedbackmailer.php">
+        <form method="post" action="feedbackMailer.php">
 
             <div class="survey__table">
                 <div class="survey__table--row">
@@ -73,7 +73,20 @@
 
             <div class="survey__submitContainer">
                 <input type= "submit" class="survey__submitContainer--btn"></input>
+                
+                <?php
+                    if($_GET["success"] == 1) {
+                        echo "<div class=\"survey__submitContainer--response survey__submitContainer--response-success\">Success! Your form has been submitted.</div>";
+                    }
+
+                    if($_GET["success"] == -1) {
+                        echo "<div class=\"survey__submitContainer--response survey__submitContainer--response-fail\">Oops... something went wrong.</div>";
+                    }                               
+                ?>
+                
             </div>
+
+            
             <!-- NAME	NAME	NAME
                			
                 			

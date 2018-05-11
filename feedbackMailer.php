@@ -1,7 +1,7 @@
 <?php
 
     //Get the form fields, removes html tags and whitespace.
-    $instructor1 = strip_tags(trim($_POST["instrutor1"]));
+    $instructor1 = strip_tags(trim($_POST["instructor1"]));
     $instructor1 = str_replace(array("\r","\n"),array(" "," "),$instructor1);
     $instructor2 = strip_tags(trim($_POST["instructor2"]));
     $instructor2 = str_replace(array("\r","\n"),array(" "," "),$instructor2);
@@ -9,6 +9,10 @@
     $instructor3 = str_replace(array("\r","\n"),array(" "," "),$instructor3);
     
     // Check the data.
+        if (empty($instructor3)) {
+            header("Location: http://www.take2tech.ca/InnoTech/InnoFeedTestArea/index.php?success=-1#surveySubmit");
+             exit;
+        }
     // if (empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     //     header("Location: http://www.take2tech.ca/InnoGradSurvey/index.php?success=-1#surveySubmit");
     //     exit;
@@ -16,6 +20,10 @@
 
     // Set the recipient email address. Update this to YOUR desired email address.
     $recipient = "tmurv@shaw.ca";
+
+    //for Testing
+    $name = "Inno Student";
+    $email = "tech@take2tech.ca";
 
     // Set the email subject.
     $subject = "Final Feedback Form";
@@ -28,7 +36,7 @@
 
     
     // Build the email headers.
-    $email_headers = "From: $instructor1 <$instructor2>";
+    $email_headers = "From: $name <$email>";
 
     // Send the email.
     mail($recipient, $subject, $email_content, $email_headers);
