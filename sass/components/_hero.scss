@@ -1,17 +1,23 @@
 .header {
     &__hero {
         position: absolute;
-        top: 40%;
-        left: 35%;
+        top: 36%;
+        left: 29%;
         transform: translate(-50%, -50%);
 
         &--mainText,
         &--subText {
             text-align: center;
             color: #108dc7;
+            
+            font-weight: 300;   
+        }
+
+        &--mainText {
+            font-size: 182%;
+        }
+        &--subText {
             font-size: 280%;
-            font-weight: 300;
-        
         }
     }
     &__.btn {

@@ -1,0 +1,58 @@
+.footer {
+    background-color: #333;
+    padding: 2rem 4rem;
+    &__topRow {
+        display: flex;
+        justify-content: space-between;
+        
+        &--menu {
+            
+            text-transform: uppercase;
+        }    
+        & ul {
+            list-style: none;
+            display: flex;
+            
+        }
+        &--menu li,
+        &--contact li {
+            
+            margin: 0px 20px;
+            font-size: 120%;
+        }
+        &--menu li a:link,
+        &--menu li a:visited,
+        &--contact li a:link,
+        &--contact li a:visited {
+            text-decoration: none;
+            border: 0;
+            color: #888;
+            transition: color 0.4s;
+        }
+        &--menu li a:hover,
+        &--menu li a:active,
+        &--contact li a:hover,
+        &--contact li a:active {
+            color: #dfdfdf;
+        }
+        &--contact {
+            & img {
+                height: 1.5rem;
+                border-radius: 5px;
+                &:link,
+                &:visited {
+                    transition: all 0.4s;
+                }
+                &:hover,
+                &:active {
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+    &__copy {
+        color: #888;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}

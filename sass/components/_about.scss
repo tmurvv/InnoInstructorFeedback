@@ -1,0 +1,28 @@
+.about {
+    background-color: #FFF;
+    padding: 50px;
+    &__container {
+        width: 72%;
+        margin: 3rem auto 2rem;
+
+        & p {
+            margin-top: 1rem;
+        }
+
+        & a {
+            text-decoration: none;
+            color: $colorPrimary-light;
+            font-weight: 400;
+            font-size: 95%;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom, color 0.4s;
+        }
+    }
+}
+
+.section-about a:hover,
+.section-about a:active {
+    color: $colorPrimary;
+    border-bottom: 2px solid $colorPrimary;
+}
