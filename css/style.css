@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+*:focus {
+  outline: none; }
+
 html {
   font-size: 62.5%;
   background-color: #fff;
@@ -11,6 +14,20 @@ html {
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility; }
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #cbcbcb;
+  opacity: 1;
+  /* Firefox */ }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #cbcbcb; }
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #cbcbcb; }
 
 @media only screen and (max-width: 75em) {
   font-size: 56.25%; }
@@ -147,7 +164,7 @@ body {
 
 .about {
   background-color: #FFF;
-  padding: 50px; }
+  margin-top: 3rem; }
   .about__container {
     width: 72%;
     margin: 3rem auto 2rem; }
@@ -168,5 +185,65 @@ body {
   border-bottom: 2px solid #108dc7; }
 
 .survey {
-  height: 400px;
-  background-color: #ececec; }
+  background-color: #ececec;
+  width: 100%; }
+  .survey__heading {
+    padding: 4rem auto 2rem;
+    font-size: 240%;
+    font-weight: 400;
+    text-align: center; }
+    .survey__heading:after {
+      display: block;
+      height: 2px;
+      background-color: #108dc7;
+      content: ' ';
+      width: 100px;
+      margin: 0 auto;
+      margin-top: 30px; }
+  .survey__subHeading {
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: 400; }
+  .survey__table {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    border: 7px double #46b1e2; }
+    .survey__table--row {
+      display: flex;
+      flex: 0 0 50%;
+      justify-content: space-between; }
+      .survey__table--row:not(:last-child) {
+        border-bottom: 1px solid #46b1e2; }
+      .survey__table--rowHeading {
+        flex: 0 0 55%; }
+    .survey__table--col, .survey__table--colHeading {
+      flex: 0 0 15%;
+      border-left: 1px solid #46b1e2;
+      padding: 4px; }
+      .survey__table--col > input, .survey__table--colHeading > input {
+        transform: translateY(-4px);
+        border-radius: 5px; }
+    .survey__table--col {
+      text-align: center; }
+      .survey__table--col > input {
+        width: 2.5rem;
+        height: 100%;
+        border: 1px solid #ccc; }
+    .survey__table--colHeading > input {
+      width: 100%;
+      height: 100%; }
+  .survey__submitContainer {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .survey__submitContainer--btn {
+      background-color: #108dc7;
+      padding: .5rem 1rem;
+      font-size: 140%;
+      border-radius: 10px;
+      letter-spacing: 1.3px;
+      color: #fff; }
+      .survey__submitContainer--btn:hover, .survey__submitContainer--btn:active {
+        transform: scale(1.05); }

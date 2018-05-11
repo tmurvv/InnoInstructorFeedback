@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+*:focus {outline:none;}
+
 html {
     //This defines what our default font is in rems. We decided we wanted 1 rem to default to = 10px. 
     //We chose 10px for ease of conversion from px to rem
@@ -14,6 +16,20 @@ html {
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
+}
+
+//This section lightens up the placeholder font
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #cbcbcb;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #cbcbcb;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #cbcbcb;
 }
 
 //BTW Media queries do not refer to the rem size we defined above.

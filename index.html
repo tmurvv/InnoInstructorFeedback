@@ -43,10 +43,41 @@
         <h2 class="survey__heading">Final Feedback Survey</h2>
         <h4 class="survey__subHeading">Please give each instructor a rating from 1 to 10, with 1 being poor and 10 being excellent:</h4>
         <form action="feedbackmailer.php">
-                <!-- NAME	NAME	NAME
-                Was well prepared			
-                Was knowledgeable			
-                Communicated clearly & effectively			
+
+            <div class="survey__table">
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading"></div>
+                    <div class="survey__table--colHeading"><input type="text" name="instructor1" placeholder="Instructor Name"></div>
+                    <div class="survey__table--colHeading"><input type="text" name="instructor2" placeholder="Instructor Name"></div>
+                    <div class="survey__table--colHeading"><input type="text" name="instructor3" placeholder="Instructor Name"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading"> Was well prepared</div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Was knowledgeable</div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Communicated clearly & effectively</div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                </div>
+            </div>
+
+            <div class="survey__submitContainer">
+                <input type= "submit" class="survey__submitContainer--btn"></input>
+            </div>
+            <!-- NAME	NAME	NAME
+               			
+                			
+                		
                 Used time efficiently			
                 Created a fun learning environment			
                 Provided positive and constructive feedback to students			
