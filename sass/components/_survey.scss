@@ -16,6 +16,11 @@
             margin-top: 30px;
         }
     }
+
+    
+
+
+
     &__subHeading {
         text-align: center;
         margin: 2rem 0;
@@ -35,8 +40,27 @@
             }
             &Heading {
                 flex: 0 0 55%;
+                &-row1 {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    padding: 0 1rem 0 2rem;
+                    font-size: 100%;
+                    &Ins
+                    
+                    {
+                        color: $colorPrimary;
+                        font-weight: 600;
+                        letter-spacing: 8.7px;
+                        font-size: 140%;
+                    }
+                }
             }
         }
+
+
+
         &--col,
         &--colHeading {
             flex: 0 0 15%;
