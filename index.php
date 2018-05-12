@@ -41,8 +41,10 @@
 
     </section>
     <section class="survey">
-        <h2 class="survey__heading">Final Feedback Survey</h2>
-        <h4 class="survey__subHeading">Please give each instructor a rating from 1 to 10, with 1 being poor and 10 being excellent:</h4>
+        <div class="survey__headingContainer">
+            <h2 class="survey__headingContainer--heading">Final Feedback Survey</h2>
+            <h4 class="survey__headingContainer--subHeading">Please give each instructor a rating from 1 to 10, with 1 being poor and 10 being excellent:</h4>
+        </div>
         <form method="post" action="feedbackMailer.php">
 
             <div class="survey__table">
@@ -56,61 +58,61 @@
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading"> Was well prepared</div>
-                    <div class="survey__table--col" name="prepared1"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="prepared1"></div>
+                    <div class="survey__table--col"><input type="text" name="prepared2"></div>
+                    <div class="survey__table--col"><input type="text" name="prepared3"></div>
                 </div>
                 <div class="survey__table--row">
-                    <div class="survey__table--rowHeading">Was knowledgeable</div>
-                    <div class="survey__table--col" name="knowledgeable1"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--rowHeading">Was knowledgable</div>
+                    <div class="survey__table--col"><input type="text" name="knowledgable1"></div>
+                    <div class="survey__table--col"><input type="text" name="knowledgable2"></div>
+                    <div class="survey__table--col"><input type="text" name="knowledgable3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Communicated clearly & effectively</div>
-                    <div class="survey__table--col" name="communicated1"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="communicated1"></div>
+                    <div class="survey__table--col"><input type="text" name="communicated2"></div>
+                    <div class="survey__table--col"><input type="text" name="communicated3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Used time efficiently</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="time1"></div>
+                    <div class="survey__table--col"><input type="text" name="time2"></div>
+                    <div class="survey__table--col"><input type="text" name="time3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Created a fun learning environment</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="fun1"></div>
+                    <div class="survey__table--col"><input type="text" name="fun2"></div>
+                    <div class="survey__table--col"><input type="text" name="fun3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Provided positive and constructive feedback to students</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="feedback1"></div>
+                    <div class="survey__table--col"><input type="text" name="feedback2"></div>
+                    <div class="survey__table--col"><input type="text" name="feedback3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Was open to student feedback & suggestions	</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="open1"></div>
+                    <div class="survey__table--col"><input type="text" name="open2"></div>
+                    <div class="survey__table--col"><input type="text" name="open3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Treated students with respect</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="respect1"></div>
+                    <div class="survey__table--col"><input type="text" name="respect2"></div>
+                    <div class="survey__table--col"><input type="text" name="respect3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Overall Instructor’s Performance (out of 10)</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="overall1"></div>
+                    <div class="survey__table--col"><input type="text" name="overall2"></div>
+                    <div class="survey__table--col"><input type="text" name="overall3"></div>
                 </div>
                 <div class="survey__table--comments">
                     <label for="instructorComments">Additional Instructor Comments:</label>
-                    <textarea name="instructorComments"></textarea>
+                    <textarea name="additionalInstructorComments" placeholder="Please specify instructor if necessary"></textarea>
                 </div>
 
 
@@ -127,37 +129,37 @@
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Was knowledgeable & helpful</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="knowledgableStaff1"></div>
+                    <div class="survey__table--col"><input type="text" name="knowledgableStaff2"></div>
+                    <div class="survey__table--col"><input type="text" name="knowledgableStaff3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Was available & approachable</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="availableStaff1"></div>
+                    <div class="survey__table--col"><input type="text" name="availableStaff2"></div>
+                    <div class="survey__table--col"><input type="text" name="availableStaff3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Communicated promptly, clearly & effectively</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="timelyStaff1"></div>
+                    <div class="survey__table--col"><input type="text" name="timelyStaff2"></div>
+                    <div class="survey__table--col"><input type="text" name="timelyStaff3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Shared useful solutions & resources for any inquiries</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="usefulStaff1"></div>
+                    <div class="survey__table--col"><input type="text" name="usefulStaff2"></div>
+                    <div class="survey__table--col"><input type="text" name="usefulStaff3"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Treated students with respect</div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text" name="respectfulStaff1"></div>
+                    <div class="survey__table--col"><input type="text" name="respectfulStaff2"></div>
+                    <div class="survey__table--col"><input type="text" name="respectfulStaff3"></div>
                 </div>
                 <div class="survey__table--comments">
-                    <label for="instructorComments">Additional Staff Comments:</label>
-                    <textarea name="instructorComments"></textarea>
+                    <label for="additionalStaffComments">Additional Staff Comments:</label>
+                    <textarea name="additionStaffComments" placeholder="Please specify staff if necessary"></textarea>
                 </div>
             </div>
             <div class="survey__table">
@@ -165,6 +167,9 @@
                 <div class="survey__table--speakPositively">
                     <p>Would you speak positively about this program to others <strong>(select)</strong>?</p>
                     <div class="container">
+
+                        <input type="text" style="width:40px;" name="speakPosOthers">
+                        <p>Buttons not yet implemented</p>
                         <button type="button" class="box" name="overallRating1"><p class="num">10</p></button>
                         <button type="button" class="box" name="overallRating2"><p class="num">9</p></button>
                         <button type="button" class="box" name="overallRating3"><p class="num">8</p></button>
@@ -187,13 +192,13 @@
             <div class="survey__table">
                 
                 <div class="survey__table--nameOptional">
-                    <p>Student Name <strong>(Optional):</strong><input type:"text" name="name" placeholder="name"></p>                    
+                    <p>Student Name <strong>(Optional):</strong><input type:"text" name="nameOptional" placeholder="name"></p>                    
                     <div>Any other additional comments about the Program?</div>
-                    <textarea placeholder="additional comments"></textarea>
+                    <textarea placeholder="additional comments" name="finalComments"></textarea>
                 </div>
             </div>
 
-            <div class="survey__submitContainer">
+            <div class="survey__submitContainer" id="surveySubmit">
                 <input type= "submit" class="survey__submitContainer--btn"></input>
                 
                 <?php

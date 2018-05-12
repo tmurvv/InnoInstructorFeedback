@@ -1,6 +1,7 @@
 .about {
-    background-color: #FFF;
+    background-color: #fff;
     margin-top: 3rem;
+    
     &__container {
         width: 72%;
         margin: 3rem auto 2rem;
@@ -17,6 +18,21 @@
             padding-bottom: 2px;
             border-bottom: 2px solid transparent;
             transition: border-bottom, color 0.4s;
+        }
+
+        & h2 {
+            text-align: center;
+            margin: 0 auto;
+
+            &:after {
+                display: block;
+                height: 2px;
+                background-color: $colorPrimary;
+                content: ' ';
+                width: 100px;
+                margin: 0 auto;
+                margin-top: 30px;
+            }
         }
     }
 }

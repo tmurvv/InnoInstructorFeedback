@@ -1,1 +1,12 @@
 favicon not working
+
+$knowledgableStaff3 = strip_tags(trim($_POST["knowledgableStaff3"]));
+    $knowledgableStaff3 = str_replace(array("\r","\n"),array(" "," "),$knowledgableStaff3);
+    $communicatedStaff3 = strip_tags(trim($_POST["communicatedStaff3"]));
+    $communicatedStaff3 = str_replace(array("\r","\n"),array(" "," "),$communicatedStaff3);
+    $timeStaff3 = strip_tags(trim($_POST["timeStaff3"]));
+    $timeStaff3 = str_replace(array("\r","\n"),array(" "," "),$timeStaff3);
+    $funStaff3 = strip_tags(trim($_POST["funStaff3"]));
+    $funStaff3 = str_replace(array("\r","\n"),array(" "," "),$funStaff3);
+    $feedbackStaff3 = strip_tags(trim($_POST["feedbackStaff3"]));
+    $feedbackStaff3 = str_replace(array("\r","\n"),array(" "," "),$feedbackStaff3);
