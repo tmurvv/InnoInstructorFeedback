@@ -1,10 +1,11 @@
 .survey {
     //background-color: #ececec;
-    background: linear-gradient(to bottom, #343d41, #343d41 1%, #ececec 2%, #ececec 100%);
+    background: linear-gradient(to bottom, #33393b, #ececec 7%, #ececec 100%);
     width: 100%;
     &__headingContainer {
-        margin-top:4rem;
+        
         &--heading {
+            padding-top: 4rem;
             font-size: 240%;
             font-weight: 400;
             text-align: center;
@@ -124,7 +125,7 @@
         }
     }
     &__submitContainer {
-        padding-bott: 2rem;
+        padding-bottom: 2rem;
         width: 100%;
         display: flex;
         justify-content: center;

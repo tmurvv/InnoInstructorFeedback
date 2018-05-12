@@ -1,7 +1,8 @@
 <?php
 
     //Get the form fields, removes html tags and whitespace.
-    //Instructor
+
+    //Instructor Section
     $instructor1 = strip_tags(trim($_POST["instructor1"]));
     $instructor1 = str_replace(array("\r","\n"),array(" "," "),$instructor1);
     $instructor2 = strip_tags(trim($_POST["instructor2"]));
@@ -72,10 +73,10 @@
 
     $staff1 = strip_tags(trim($_POST["staff1"]));
     $staff1 = str_replace(array("\r","\n"),array(" "," "),$staff1);
-    // $staff2 = strip_tags(trim($_POST["staff2"]));Staff
-    // $staff2 = str_replace(array("\r","\n"),array(" "," "),$staff2);
-    // $staff3 = strip_tags(trim($_POST["staff3"]));
-    // $staff3 = str_replace(array("\r","\n"),array(" "," "),$instructor3);
+    $staff2 = strip_tags(trim($_POST["staff2"]));
+    $staff2 = str_replace(array("\r","\n"),array(" "," "),$staff2);
+    $staff3 = strip_tags(trim($_POST["staff3"]));
+    $staff3 = str_replace(array("\r","\n"),array(" "," "),$staff3);
 
     $knowledgableStaff1 = strip_tags(trim($_POST["knowledgableStaff1"]));
     $knowledgableStaff1 = str_replace(array("\r","\n"),array(" "," "),$knowledgableStaff1);
@@ -110,15 +111,15 @@
     $respectfulStaff3 = strip_tags(trim($_POST["respectfulStaff3"]));
     $respectfulStaff3 = str_replace(array("\r","\n"),array(" "," "),$respectfulStaff3);
 
-    $additionalInstructorComments = trim($_POST["additionalStaffComments"]);
+    $additionalStaffComments = trim($_POST["additionalStaffComments"]);
 
-    // //Final comments section
+    //Final comments section
 
-    // $speakPosOthers = strip_tags(trim($_POST["speakPosOthers"]));
-    // $speakPosOthers = str_replace(array("\r","\n"),array(" "," "),$speakPosOthers);
-    // $nameOptional = strip_tags(trim($_POST["nameOptional"]));
-    // $nameOptional = str_replace(array("\r","\n"),array(" "," "),$nameOptional);
-    //$finalComments = trim($_POST["finalComments"]);
+    $speakPosOthers = strip_tags(trim($_POST["speakPosOthers"]));
+    $speakPosOthers = str_replace(array("\r","\n"),array(" "," "),$speakPosOthers);
+    $nameOptional = strip_tags(trim($_POST["nameOptional"]));
+    $nameOptional = str_replace(array("\r","\n"),array(" "," "),$nameOptional);
+    $finalComments = trim($_POST["finalComments"]);
 
     // Check the data.
     // if (empty($instructor1)) {
@@ -176,39 +177,38 @@
     $email_content .= "Treated students with respect: $respect3\n";
     $email_content .= "Overall Instructor’s Performance (out of 10): $overall3\n";
     
-    $email_content .= "\n\nAdditional Instructor Comments: $additionalInstructorComments\n";
+    $email_content .= "\nAdditional Instructor Comments: \n\n$additionalInstructorComments\n";
 
-    //build email staff
+    //build email content staff
 
     $email_content .= "\n--------\n\nFeedback for $staff1\n\n";
-    $email_content .= "Was knowledgeable: $knowledgableStaff1\n";
-    $email_content .= "Communicated clearly & effectively: $availableStaff1\n";
-    $email_content .= "Used time effectively: $timelyStaff1\n";
-    $email_content .= "Created a fun learning environment: $usefulStaff1\n";  
+    $email_content .= "Was knowledgeable & helpful: $knowledgableStaff1\n";
+    $email_content .= "Was available & approachable: $availableStaff1\n";
+    $email_content .= "Communicated promptly, clearly & effectively: $timelyStaff1\n";
+    $email_content .= "Shared useful solutions & resources for any inquiries: $usefulStaff1\n";  
     $email_content .= "Treated students with respect: $respectfulStaff1\n";
 
     $email_content .= "\n--------\n\nFeedback for $staff2\n\n";
-    $email_content .= "Was knowledgeable: $knowledgableStaff2\n";
-    $email_content .= "Communicated clearly & effectively: $availableStaff2\n";
-    $email_content .= "Used time effectively: $timelyStaff2\n";
-    $email_content .= "Created a fun learning environment: $usefulStaff2\n";  
+    $email_content .= "Was knowledgeable & helpful: $knowledgableStaff2\n";
+    $email_content .= "Was available & approachable: $availableStaff2\n";
+    $email_content .= "Communicated promptly, clearly & effectively: $timelyStaff2\n";
+    $email_content .= "Shared useful solutions & resources for any inquiries: $usefulStaff2\n";  
     $email_content .= "Treated students with respect: $respectfulStaff2\n";
 
     $email_content .= "\n--------\n\nFeedback for $staff3\n\n";
-    $email_content .= "Was knowledgeable: $knowledgableStaff3\n";
-    $email_content .= "Communicated clearly & effectively: $availableStaff3\n";
-    $email_content .= "Used time effectively: $timelyStaff3\n";
-    $email_content .= "Created a fun learning environment: $usefulStaff3\n";  
+    $email_content .= "Was knowledgeable & helpful: $knowledgableStaff3\n";
+    $email_content .= "Was available & approachable: $availableStaff3\n";
+    $email_content .= "Communicated promptly, clearly & effectively: $timelyStaff3\n";
+    $email_content .= "Shared useful solutions & resources for any inquiries: $usefulStaff3\n";  
     $email_content .= "Treated students with respect: $respectfulStaff3\n";
 
-    $email_content .= "\n\nAdditional Staff Comments: \n\n$additionalStaffComments\n";
+    $email_content .= "\nAdditional Staff Comments: \n\n$additionalStaffComments\n";
 
-    // //final section build email
-    // $email_content .= "\n\n--------\n\nClosing Section\n\n";
-    
-    // $email_content .= "Would you speak positively about this program to others (1 to 10): $speakPosOthers\n";
-    // $email_content .= "Student Name (Optional): $nameOptional\n";   
-    // $email_content .= "Any Other Addtional Comments About the Program:\n\n$finalComments";
+    //build email content final section
+    $email_content .= "\n\n--------\n\nClosing Section\n\n";   
+    $email_content .= "Would you speak positively about this program to others (1 to 10): $speakPosOthers\n";
+    $email_content .= "Student Name (Optional): $nameOptional\n";   
+    $email_content .= "\nAny Other Addtional Comments About the Program:\n\n$finalComments";
 
     // Build the email headers.
     $email_headers = "From: $name <$email>";

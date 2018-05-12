@@ -159,16 +159,15 @@
                 </div>
                 <div class="survey__table--comments">
                     <label for="additionalStaffComments">Additional Staff Comments:</label>
-                    <textarea name="additionStaffComments" placeholder="Please specify staff if necessary"></textarea>
+                    <textarea name="additionalStaffComments" placeholder="Please specify staff person if necessary"></textarea>
                 </div>
             </div>
             <div class="survey__table">
                 
                 <div class="survey__table--speakPositively">
                     <p>Would you speak positively about this program to others <strong>(select)</strong>?</p>
-                    <div class="container">
-
-                        <input type="text" style="width:40px;" name="speakPosOthers">
+                    <input type="text" style="width:40px;" name="speakPosOthers">
+                    <div class="container">                     
                         <p>Buttons not yet implemented</p>
                         <button type="button" class="box" name="overallRating1"><p class="num">10</p></button>
                         <button type="button" class="box" name="overallRating2"><p class="num">9</p></button>
