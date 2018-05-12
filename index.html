@@ -47,7 +47,9 @@
 
             <div class="survey__table">
                 <div class="survey__table--row">
-                    <div class="survey__table--rowHeading survey__table--rowHeading-row1"><p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Instructors<p><p>1=poor, 10=excellent</p></div>
+                    <div class="survey__table--rowHeading survey__table--rowHeading-row1">
+                        <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Instructors<p><p>1=poor, 10=excellent</p>
+                    </div>
                     <div class="survey__table--colHeading"><input type="text" name="instructor1" placeholder="Instructor Name"></div>
                     <div class="survey__table--colHeading"><input type="text" name="instructor2" placeholder="Instructor Name"></div>
                     <div class="survey__table--colHeading"><input type="text" name="instructor3" placeholder="Instructor Name"></div>
@@ -106,6 +108,89 @@
                     <div class="survey__table--col"><input type="text"></div>
                     <div class="survey__table--col"><input type="text"></div>
                 </div>
+                <div class="survey__table--comments">
+                    <label for="instructorComments">Additional Instructor Comments:</label>
+                    <textarea name="instructorComments"></textarea>
+                </div>
+
+
+            </div>
+
+            <div class="survey__table">
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading survey__table--rowHeading-row1">
+                        <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Staff<p><p>1=poor, 10=excellent</p>
+                    </div>
+                    <div class="survey__table--colHeading"><input type="text" name="staff1" placeholder="Staff Name"></div>
+                    <div class="survey__table--colHeading"><input type="text" name="staff2" placeholder="Staff Name"></div>
+                    <div class="survey__table--colHeading"><input type="text" name="staff3" placeholder="Staff Name"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Was knowledgeable & helpful</div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Was available & approachable</div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Communicated promptly, clearly & effectively</div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Shared useful solutions & resources for any inquiries</div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Treated students with respect</div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col"><input type="text"></div>
+                </div>
+                <div class="survey__table--comments">
+                    <label for="instructorComments">Additional Staff Comments:</label>
+                    <textarea name="instructorComments"></textarea>
+                </div>
+            </div>
+            <div class="survey__table">
+                
+                <div class="survey__table--speakPositively">
+                    <p>Would you speak positively about this program to others <strong>(select)</strong>?</p>
+                    <div class="container">
+                        <button type="button" class="box" name="overallRating1"><p class="num">10</p></button>
+                        <button type="button" class="box" name="overallRating2"><p class="num">9</p></button>
+                        <button type="button" class="box" name="overallRating3"><p class="num">8</p></button>
+                        <button type="button" class="box" name="overallRating4"><p class="num">7</p></button>
+                        <button type="button" class="box" name="overallRating5"><p class="num">6</p></button>
+                        <button type="button" class="box" name="overallRating6"><p class="num">5</p></button>
+                        <button type="button" class="box" name="overallRating7"><p class="num">4</p></button>
+                        <button type="button" class="box" name="overallRating8"><p class="num">3</p></button>
+                        <button type="button" class="box" name="overallRating9"><p class="num">2</p></button>
+                        <button type="button" class="box" name="overallRating10"><p class="num">1</p></button>
+                    </div>
+                    <div class="survey__table--speakPositively-label">
+                        <div>Yes, most definitely!</div>
+                        <div>No, not at all.</div>
+                    </div> 
+
+                </div>
+            </div>
+
+            <div class="survey__table">
+                
+                <div class="survey__table--nameOptional">
+                    <p>Student Name <strong>(Optional):</strong><input type:"text" name="name" placeholder="name"></p>                    
+                    <div>Any other additional comments about the Program?</div>
+                    <textarea placeholder="additional comments"></textarea>
+                </div>
             </div>
 
             <div class="survey__submitContainer">
@@ -122,21 +207,9 @@
                 ?>
                 
             </div>
-
-            
-            <!-- NAME	NAME	NAME
-               			
-                			
-                		
-                			
-                			
-                Provided positive and constructive feedback to students			
-                			
-                			
-                	 -->
-
         </form>
     </section>
+
     <section class="section-about" id="about">
         <div class="about__container">
             <h2>About this form</h2>
