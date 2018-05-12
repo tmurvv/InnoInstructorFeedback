@@ -56,19 +56,19 @@
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading"> Was well prepared</div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col" name="prepared1"><input type="text"></div>
                     <div class="survey__table--col"><input type="text"></div>
                     <div class="survey__table--col"><input type="text"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Was knowledgeable</div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col" name="knowledgeable1"><input type="text"></div>
                     <div class="survey__table--col"><input type="text"></div>
                     <div class="survey__table--col"><input type="text"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Communicated clearly & effectively</div>
-                    <div class="survey__table--col"><input type="text"></div>
+                    <div class="survey__table--col" name="communicated1"><input type="text"></div>
                     <div class="survey__table--col"><input type="text"></div>
                     <div class="survey__table--col"><input type="text"></div>
                 </div>
