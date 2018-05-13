@@ -40,7 +40,7 @@
         </div>
 
     </section>
-    <section class="survey">
+    <section class="survey" id="survey">
         <div class="survey__headingContainer">
             <h2 class="survey__headingContainer--heading">Final Feedback Survey</h2>
             <h4 class="survey__headingContainer--subHeading">Please give each instructor a rating from 1 to 10, with 1 being poor and 10 being excellent:</h4>
@@ -256,7 +256,7 @@
             // Send the email.
             if (isset($_POST["instructor1"])) {
                 if ($instructor1 === "") {
-                    echo "<div class=\"survey__submitContainer--response survey__submitContainer--response-fail\">Please fill in the first instructor name box. If not evaluating an instructor, enter 'n/a'.</div>";                    
+                    echo "<div class=\"survey__submitContainer--response survey__submitContainer--response-fail\">Please fill in the first instructor name box. If not evaluating an instructor, enter n/a.</div>";                    
                 }
                 if (mail($recipient, $subject, $email_content, $email_headers) && $instructor1 !== "") {
                     //Display success message
@@ -281,13 +281,15 @@
                 } else {
                     if ($instructor1 !== "") {
                         //Display fail message
-                        echo "<div class=\"survey__submitContainer--response survey__submitContainer--response-fail\">Oops... something went wrong.</div>";
+                        echo '<div class="survey__submitContainer--response survey__submitContainer--response-fail">Oops... something went wrong.</div>';
                     }
                 }            
             }
         ?>
 
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#survey">
+
+                <!-- <div class="survey__submitContainer--response survey__submitContainer--response-fail"><img class="alert-image" src="../img/alert.jpg">Please fill in the first instructor name box. If not evaluating an instructor, enter 'n/a'.</div>                    -->
 
             <div class="survey__table">
                 <div class="survey__table--row">
@@ -442,7 +444,7 @@
         </form>
     </section>
 
-    <section class="section-about" id="about">
+    <section class="about" id="about">
         <div class="about__container">
             <h2>About this form</h2>
             <p>This form was created by

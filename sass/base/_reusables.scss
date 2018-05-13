@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to left, rgb(233, 233, 8) 10%, $colorPrimary);
+    background: linear-gradient(to left, $colorSecondary 10%, $colorPrimary);
     width: 500px;
     
 }
@@ -13,6 +13,7 @@
     height: 50px;
     width: 50px;
     margin: 0 auto;
+
     border: 2px outset buttonface;
     background-color: transparent;
     &:hover,

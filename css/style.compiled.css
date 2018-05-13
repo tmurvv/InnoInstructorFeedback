@@ -29,7 +29,7 @@ html {
   /* Microsoft Edge */
   color: #cbcbcb; }
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 68.75em) {
   font-size: 56.25%; }
 
 @media only screen and (max-width: 56.25em) {
@@ -44,11 +44,16 @@ body {
   line-height: 1.7;
   color: #666; }
 
+.alert-image {
+  height: .8rem;
+  margin-right: 3px;
+  border-radius: 3px; }
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to left, #e9e908 10%, #108dc7);
+  background: linear-gradient(to left, #fbff00 10%, #108dc7);
   width: 500px; }
 
 .box {
@@ -105,10 +110,17 @@ body {
     .footer__topRow ul {
       list-style: none;
       display: flex; }
+      @media only screen and (max-width: 56.25em) {
+        .footer__topRow ul {
+          flex-flow: column; } }
     .footer__topRow--menu li,
     .footer__topRow--contact li {
-      margin: 0px 20px;
+      margin: 0px 1.7rem;
       font-size: 120%; }
+      @media only screen and (max-width: 56.25em) {
+        .footer__topRow--menu li,
+        .footer__topRow--contact li {
+          font-size: 100%; } }
     .footer__topRow--menu li a:link,
     .footer__topRow--menu li a:visited,
     .footer__topRow--contact li a:link,
@@ -154,21 +166,30 @@ body {
       list-style: none; }
       .header__topline--mainNav-item {
         margin: 0 2rem;
-        color: #ccc; }
+        color: #e4e4e4; }
 
 .header__hero {
   position: absolute;
   top: 43%;
   left: 29%;
   transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 68.75em) {
+    .header__hero {
+      left: 36%; } }
   .header__hero--mainText, .header__hero--subText {
     text-align: center;
-    color: #108dc7;
-    font-weight: 300; }
+    color: #1299d8;
+    font-weight: 400; }
   .header__hero--mainText {
     font-size: 182%; }
+    @media only screen and (max-width: 68.75em) {
+      .header__hero--mainText {
+        font-size: 130%; } }
   .header__hero--subText {
     font-size: 280%; }
+    @media only screen and (max-width: 68.75em) {
+      .header__hero--subText {
+        font-size: 208%; } }
 
 .header__.btn {
   padding: 1.5rem;
@@ -178,11 +199,13 @@ body {
   border: 1px solid #f1f141; }
 
 .about {
-  background-color: #fff;
+  background-color: #fcfcfc;
   margin-top: 3rem; }
   .about__container {
     width: 72%;
-    margin: 3rem auto 2rem; }
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    padding-bottom: .5rem; }
     .about__container p {
       margin-top: 1rem; }
     .about__container a {
@@ -211,7 +234,7 @@ body {
   border-bottom: 2px solid #108dc7; }
 
 .survey {
-  background: linear-gradient(to bottom, #3e4649, #ececec 3%, #ececec 100%);
+  background-color: #fcfcfc;
   width: 100%; }
   .survey__headingContainer--heading {
     padding-top: 4rem;
@@ -251,12 +274,19 @@ body {
           justify-content: space-between;
           align-items: center;
           padding: 0 1rem 0 2rem;
-          font-size: 100%; }
+          font-size: 87%; }
+          @media only screen and (max-width: 68.75em) {
+            .survey__table--rowHeading-row1 {
+              padding: 0;
+              padding-right: .5rem; } }
           .survey__table--rowHeading-row1Ins {
             color: #108dc7;
             font-weight: 600;
             letter-spacing: 8.7px;
             font-size: 140%; }
+            @media only screen and (max-width: 56.25em) {
+              .survey__table--rowHeading-row1Ins {
+                letter-spacing: 3.7; } }
     .survey__table--col, .survey__table--colHeading {
       flex: 0 0 15%;
       border-left: 1px solid #46b1e2;
@@ -269,7 +299,7 @@ body {
       .survey__table--col > input {
         width: 2.5rem;
         height: 100%;
-        border: 1px solid #ccc; }
+        border: 1px solid #e4e4e4; }
     .survey__table--colHeading > input {
       width: 100%;
       height: 100%; }
@@ -320,16 +350,17 @@ body {
       .survey__submitContainer--btn:hover, .survey__submitContainer--btn:active {
         transform: scale(1.05); }
     .survey__submitContainer--response {
-      padding: .5rem 1rem;
-      font-weight: 300;
-      font-size: 140%;
-      margin-left: 1rem;
+      padding: 1rem 1.5rem;
+      font-size: 80%;
+      font-weight: 400;
+      width: 26%;
+      margin: 0 auto 1.5rem;
       border-radius: 15px;
       transform: translateY(-4px);
-      color: #333;
+      color: #fff;
       border: 2px outset buttonface;
       border-image: initial; }
       .survey__submitContainer--response-success {
-        background-color: #56bf56; }
+        background-color: #46b1e2; }
       .survey__submitContainer--response-fail {
-        background-color: #f70b0b; }
+        background-color: #fbff00; }

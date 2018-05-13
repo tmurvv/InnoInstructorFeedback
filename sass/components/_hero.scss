@@ -3,21 +3,30 @@
         position: absolute;
         top: 43%;
         left: 29%;
+
+        @include respond(landscape) {
+            left: 36%;
+        }
         transform: translate(-50%, -50%);
 
         &--mainText,
         &--subText {
             text-align: center;
-            color: #108dc7;
-            
-            font-weight: 300;   
+            color: #1299d8;            
+            font-weight: 400;   
         }
 
         &--mainText {
             font-size: 182%;
+            @include respond(landscape) {
+                font-size: 130%;
+            }
         }
         &--subText {
             font-size: 280%;
+            @include respond(landscape) {
+                font-size: 208%;
+            }
         }
     }
     &__.btn {
