@@ -165,8 +165,65 @@
 
             //Final comments section
 
-            $speakPosOthers = strip_tags(trim($_POST["speakPosOthers"]));
-            $speakPosOthers = str_replace(array("\r","\n"),array(" "," "),$speakPosOthers);
+
+            $overallRating = strip_tags(trim($_POST["overallRating"]));
+            $overallRating = str_replace(array("\r","\n"),array(" "," "),$overallRating);
+
+            // $overallRating1 = strip_tags(trim($_POST["overalRating1"]));
+            // $overallRating2 = str_replace(array("\r","\n"),array(" "," "),$overalRating1);
+            // $overallRating1 = strip_tags(trim($_POST["overalRating2"]));            
+            // $overallRating2 = str_replace(array("\r","\n"),array(" "," "),$overalRating2);
+            // $overallRating3 = strip_tags(trim($_POST["overalRating3"]));
+            // $overallRating3 = str_replace(array("\r","\n"),array(" "," "),$overalRating3);
+            // $overallRating4 = strip_tags(trim($_POST["overalRating4"]));
+            // $overallRating4 = str_replace(array("\r","\n"),array(" "," "),$overalRating4);
+            // $overallRating5 = strip_tags(trim($_POST["overalRating5"]));
+            // $overallRating5 = str_replace(array("\r","\n"),array(" "," "),$overalRating5);
+            // $overallRating6 = strip_tags(trim($_POST["overalRating6"]));
+            // $overallRating6 = str_replace(array("\r","\n"),array(" "," "),$overalRating6);
+            // $overallRating7 = strip_tags(trim($_POST["overalRating7"]));
+            // $overallRating7 = str_replace(array("\r","\n"),array(" "," "),$overalRating7);
+            // $overallRating8 = strip_tags(trim($_POST["overalRating8"]));
+            // $overallRating8 = str_replace(array("\r","\n"),array(" "," "),$overalRating8);
+            // $overallRating9 = strip_tags(trim($_POST["overalRating9"]));
+            // $overallRating9 = str_replace(array("\r","\n"),array(" "," "),$overalRating9);
+            // $overallRating10 = strip_tags(trim($_POST["overalRatin101"]));
+            // $overallRating10 = str_replace(array("\r","\n"),array(" "," "),$overalRating10);
+
+            $speakPosOthers = "";
+            echo $overallRating1;
+            if (isset($overallRating1) || $overallRating1 = "1") {
+              
+                $speakPosOthers = "1";
+            }
+            if (isset($overallRating2) && $overallRating = "2") {
+                $speakPosOthers = "2";
+            }
+            // if (isset($overallRating3)) {
+            //     $speakPosOthers = "3";
+            // }
+            // if (isset($overallRating4)) {
+            //     $speakPosOthers = "4";
+            // }
+            // if (isset($overallRating5)) {
+            //     $speakPosOthers = "5";
+            // }
+            // if (isset($overallRating6)) {
+            //     $speakPosOthers = "6";
+            // }
+            // if (isset($overallRating7)) {
+            //     $speakPosOthers = "7";
+            // }
+            // if (isset($overallRating8)) {
+            //     $speakPosOthers = "8";
+            // }
+            // if (isset($overallRating9)) {
+            //     $speakPosOthers = "9";
+            // }
+            // if (isset($overallRating10)) {
+            //     $speakPosOthers = "10";
+            // }
+            
             $nameOptional = strip_tags(trim($_POST["nameOptional"]));
             $nameOptional = str_replace(array("\r","\n"),array(" "," "),$nameOptional);
             $finalComments = trim($_POST["finalComments"]);
@@ -176,8 +233,9 @@
 
             //for Testing
             $name = "Inno Student";
-            $email = "tmurv@shaw.ca";
+            $email = "info@innotechcollege.com";
             $notifytake2tech = "tmurv@shaw.ca";
+            $copytake2tech = "tmurv@shaw.ca";
 
             // Set the email subject.
             $subject = "Final Feedback Form";
@@ -265,6 +323,7 @@
 
                     //Notify webmaster
                     mail($notifytake2tech, $subject, $notify_content, $email_headers);
+                    mail($copytake2tech, $subject, $notify_content, $email_headers); //for testing only
 
                     //Reset input variables to ""
                     $instructor1 = $prepared1 = $knowledgable1 = $communicated1 = $time1 = $fun1 = $feedback1 = $open1 = $respect1 = $overall1 = "";
@@ -407,19 +466,17 @@
                 
                 <div class="survey__table--speakPositively">
                     <p>Would you speak positively about this program to others <strong>(select)</strong>?</p>
-                    <input type="text" style="width:40px;" name="speakPosOthers" value="<?php echo $speakPosOthers?>">
-                    <div class="container">                     
-                        <p>Buttons not yet implemented</p>
-                        <button type="button" class="box" name="overallRating1"><p class="num">10</p></button>
-                        <button type="button" class="box" name="overallRating2"><p class="num">9</p></button>
-                        <button type="button" class="box" name="overallRating3"><p class="num">8</p></button>
-                        <button type="button" class="box" name="overallRating4"><p class="num">7</p></button>
-                        <button type="button" class="box" name="overallRating5"><p class="num">6</p></button>
-                        <button type="button" class="box" name="overallRating6"><p class="num">5</p></button>
-                        <button type="button" class="box" name="overallRating7"><p class="num">4</p></button>
-                        <button type="button" class="box" name="overallRating8"><p class="num">3</p></button>
-                        <button type="button" class="box" name="overallRating9"><p class="num">2</p></button>
-                        <button type="button" class="box" name="overallRating10"><p class="num">1</p></button>
+                    <div class="container">                                            
+                        <input type="radio" name="overallRating" class="box" id="rating10" value="10"><p class="num">10</p>
+                        <input type="radio" name="overallRating" class="box" id="rating9" value="9"><p class="num">9</p>
+                        <input type="radio" name="overallRating" class="box" id="rating8" value="8"><p class="num">8</p>
+                        <input type="radio" name="overallRating" class="box" id="rating7" value="7"><p class="num">7</p>
+                        <input type="radio" name="overallRating" class="box" id="rating6" value="6"><p class="num">6</p>
+                        <input type="radio" name="overallRating" class="box" id="rating5" value="5"><p class="num">5</p>
+                        <input type="radio" name="overallRating" class="box" id="rating4" value="4"><p class="num">4</p>
+                        <input type="radio" name="overallRating" class="box" id="rating3" value="3"><p class="num">3</p>
+                        <input type="radio" name="overallRating" class="box" id="rating2" value="2"><p class="num">2</p>
+                        <input type="radio" name="overallRating" class="box" id="rating1" value="1"><p class="num">1</p>
                     </div>
                     <div class="survey__table--speakPositively-label">
                         <div>Yes, most definitely!</div>

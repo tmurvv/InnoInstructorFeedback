@@ -50,20 +50,28 @@ body {
   border-radius: 3px; }
 
 .container {
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(to left, #e0e404 10%, #108dc7);
-  width: 500px; }
+  padding: 0 5px 0 10px;
+  border-radius: 5px; }
 
 .box {
-  height: 50px;
-  width: 50px;
+  height: 25px;
   margin: 0 auto;
   border: 2px outset buttonface;
-  background-color: transparent; }
+  background-color: transparent;
+  transform: scale(1.5); }
+  @media only screen and (max-width: 26em) {
+    .box {
+      transform: scale(1); } }
   .box:hover, .box:active {
-    transform: scale(1.5); }
+    transform: scale(2); }
+    @media only screen and (max-width: 26em) {
+      .box:hover, .box:active {
+        transform: scale(1.5); } }
 
 .box > p {
   color: white;
@@ -123,12 +131,8 @@ body {
       @media only screen and (max-width: 56.25em) {
         .footer__topRow--menu li,
         .footer__topRow--contact li {
-<<<<<<< HEAD
-          font-size: 90%; } }
-=======
           font-size: 90%;
           margin: 0 0; } }
->>>>>>> singleColumn
     .footer__topRow--menu li a:link,
     .footer__topRow--menu li a:visited,
     .footer__topRow--contact li a:link,
@@ -284,7 +288,7 @@ body {
   .survey__table {
     width: 100%;
     padding: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-flow: column;
     border: 7px double #46b1e2;
@@ -351,7 +355,7 @@ body {
     .survey__table--col {
       display: flex;
       justify-content: center;
-      align-items: baseline; }
+      align-items: center; }
       .survey__table--col > input {
         width: 2rem;
         height: 2rem;
@@ -381,7 +385,6 @@ body {
       margin-bottom: 1.5rem; }
     .survey__table--speakPositively-label {
       display: flex;
-      width: 500px;
       justify-content: space-between;
       margin-top: 1rem; }
     .survey__table--nameOptional > p > input {
@@ -405,7 +408,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-content: center; }
+    align-content: center;
+    margin-bottom: 2rem; }
     .survey__submitContainer--btn {
       background-color: #108dc7;
       height: 3rem;
@@ -427,6 +431,9 @@ body {
       color: #fff;
       border: 2px outset buttonface;
       border-image: initial; }
+      @media only screen and (max-width: 56.25em) {
+        .survey__submitContainer--response {
+          width: 80%; } }
       .survey__submitContainer--response-success {
         background-color: #46b1e2; }
       .survey__submitContainer--response-fail {

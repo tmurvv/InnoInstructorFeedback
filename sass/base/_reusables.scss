@@ -1,24 +1,31 @@
 //Rating scale
 
 .container {
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to left, $colorSecondary 10%, $colorPrimary);
-    width: 500px;
     
+    background: linear-gradient(to left, $colorSecondary 10%, $colorPrimary);
+    padding: 0 5px 0 10px;
+    border-radius: 5px;   
 }
 
 .box {
-    height: 50px;
-    width: 50px;
+    height: 25px;
     margin: 0 auto;
-
     border: 2px outset buttonface;
     background-color: transparent;
+    transform: scale(1.5);
+    @include respond(smallPhone) {
+        transform: scale(1);
+    }
     &:hover,
     &:active {
-        transform: scale(1.5);
+        transform: scale(2);
+        @include respond(smallPhone) {
+            transform: scale(1.5);
+        }
     }
 }
 

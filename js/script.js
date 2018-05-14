@@ -4,4 +4,8 @@
 
 $(document).ready(function () {
     $(".form-start").html("start");
+
+    // $(".ratingButton").addEventListener("click", function(){
+    //     $('.box').prop('checked', false);
+    // });
 });
