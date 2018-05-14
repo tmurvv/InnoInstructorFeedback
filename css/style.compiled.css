@@ -120,7 +120,7 @@ body {
       @media only screen and (max-width: 56.25em) {
         .footer__topRow--menu li,
         .footer__topRow--contact li {
-          font-size: 100%; } }
+          font-size: 90%; } }
     .footer__topRow--menu li a:link,
     .footer__topRow--menu li a:visited,
     .footer__topRow--contact li a:link,
@@ -145,6 +145,9 @@ body {
     color: #888;
     text-align: center;
     margin-top: 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__copy {
+        font-size: 90%; } }
 
 .header {
   background-color: #1a2124;
