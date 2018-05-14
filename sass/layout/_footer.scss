@@ -1,12 +1,14 @@
 .footer {
     background-color: #333;
-    padding: 2rem 4rem;
+    padding: 2rem 3rem;
+    @include respond(smallPhone) {
+        padding: 1rem 1rem;
+    }
     &__topRow {
         display: flex;
         justify-content: space-between;
         
-        &--menu {
-            
+        &--menu {           
             text-transform: uppercase;
         }    
         & ul {
@@ -20,11 +22,12 @@
         &--menu li,
         &--contact li {
             
-            margin: 0px 1.7rem;
+            margin: 0 1.7rem;
             font-size: 120%;
 
             @include respond(portrait) {
-                font-size: 90%;           
+                font-size: 90%; 
+                margin: 0 0;          
             }
         }
         &--menu li a:link,

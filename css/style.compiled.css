@@ -53,7 +53,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to left, #fbff00 10%, #108dc7);
+  background: linear-gradient(to left, #e0e404 10%, #108dc7);
   width: 500px; }
 
 .box {
@@ -101,7 +101,10 @@ body {
 
 .footer {
   background-color: #333;
-  padding: 2rem 4rem; }
+  padding: 2rem 3rem; }
+  @media only screen and (max-width: 26em) {
+    .footer {
+      padding: 1rem 1rem; } }
   .footer__topRow {
     display: flex;
     justify-content: space-between; }
@@ -115,12 +118,17 @@ body {
           flex-flow: column; } }
     .footer__topRow--menu li,
     .footer__topRow--contact li {
-      margin: 0px 1.7rem;
+      margin: 0 1.7rem;
       font-size: 120%; }
       @media only screen and (max-width: 56.25em) {
         .footer__topRow--menu li,
         .footer__topRow--contact li {
+<<<<<<< HEAD
           font-size: 90%; } }
+=======
+          font-size: 90%;
+          margin: 0 0; } }
+>>>>>>> singleColumn
     .footer__topRow--menu li a:link,
     .footer__topRow--menu li a:visited,
     .footer__topRow--contact li a:link,
@@ -167,9 +175,15 @@ body {
       flex: 0 0 1;
       display: flex;
       list-style: none; }
+      @media only screen and (max-width: 37.5em) {
+        .header__topline--mainNav {
+          flex-flow: column; } }
       .header__topline--mainNav-item {
         margin: 0 2rem;
         color: #e4e4e4; }
+        @media only screen and (max-width: 37.5em) {
+          .header__topline--mainNav-item:last-child {
+            display: none; } }
 
 .header__hero {
   position: absolute;
@@ -179,6 +193,10 @@ body {
   @media only screen and (max-width: 68.75em) {
     .header__hero {
       left: 36%; } }
+  @media only screen and (max-width: 56.25em) {
+    .header__hero {
+      left: 50%;
+      width: 100%; } }
   .header__hero--mainText, .header__hero--subText {
     text-align: center;
     color: #1299d8;
@@ -188,6 +206,9 @@ body {
     @media only screen and (max-width: 68.75em) {
       .header__hero--mainText {
         font-size: 130%; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__hero--mainText {
+        font-size: 95%; } }
   .header__hero--subText {
     font-size: 280%; }
     @media only screen and (max-width: 68.75em) {
@@ -202,8 +223,8 @@ body {
   border: 1px solid #f1f141; }
 
 .about {
-  background-color: #fcfcfc;
-  margin-top: 3rem; }
+  background-color: #e7e7e7;
+  margin-top: 1rem; }
   .about__container {
     width: 72%;
     margin: 0 auto;
@@ -236,6 +257,10 @@ body {
   color: #108dc7;
   border-bottom: 2px solid #108dc7; }
 
+.formStart {
+  opacity: 0;
+  visibility: hidden; }
+
 .survey {
   background-color: #fcfcfc;
   width: 100%; }
@@ -264,10 +289,16 @@ body {
     flex-flow: column;
     border: 7px double #46b1e2;
     border-radius: 10px; }
+    @media only screen and (max-width: 37.5em) {
+      .survey__table {
+        padding: 1rem; } }
     .survey__table--row {
       display: flex;
       flex: 0 0 50%;
       justify-content: space-between; }
+      @media only screen and (max-width: 56.25em) {
+        .survey__table--row {
+          flex-flow: column; } }
       .survey__table--row:not(:last-child) {
         border-bottom: 1px solid #46b1e2; }
       .survey__table--rowHeading {
@@ -282,6 +313,9 @@ body {
             .survey__table--rowHeading-row1 {
               padding: 0;
               padding-right: .5rem; } }
+          @media only screen and (max-width: 37.5em) {
+            .survey__table--rowHeading-row1 {
+              font-size: 65%; } }
           .survey__table--rowHeading-row1Ins {
             color: #108dc7;
             font-weight: 600;
@@ -289,32 +323,60 @@ body {
             font-size: 140%; }
             @media only screen and (max-width: 56.25em) {
               .survey__table--rowHeading-row1Ins {
-                letter-spacing: 3.7; } }
+                letter-spacing: 3.7px; } }
+            @media only screen and (max-width: 37.5em) {
+              .survey__table--rowHeading-row1Ins {
+                letter-spacing: 3.7px; } }
+            @media only screen and (max-width: 26em) {
+              .survey__table--rowHeading-row1Ins {
+                letter-spacing: 3.0px;
+                font-size: 100%; } }
     .survey__table--col, .survey__table--colHeading {
       flex: 0 0 15%;
       border-left: 1px solid #46b1e2;
       padding: 4px; }
+      @media only screen and (max-width: 56.25em) {
+        .survey__table--col, .survey__table--colHeading {
+          flex: 0 0 25%; } }
+      @media only screen and (max-width: 37.5em) {
+        .survey__table--col, .survey__table--colHeading {
+          flex: 0 0 36%; } }
+      @media only screen and (max-width: 26em) {
+        .survey__table--col, .survey__table--colHeading {
+          flex: 0 0 45%; } }
       .survey__table--col > input, .survey__table--colHeading > input {
-        transform: translateY(-4px);
-        border-radius: 5px; }
+        border-radius: 5px;
+        height: 1.5rem;
+        width: 100%; }
     .survey__table--col {
-      text-align: center; }
+      display: flex;
+      justify-content: center;
+      align-items: baseline; }
       .survey__table--col > input {
-        width: 2.5rem;
-        height: 100%;
-        border: 1px solid #e4e4e4; }
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #e4e4e4;
+        text-align: center; }
     .survey__table--colHeading > input {
       width: 100%;
-      height: 100%; }
+      height: 1.5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .survey__table--colHeading > input {
+          width: 15rem; } }
     .survey__table--comments {
       height: 8rem;
       width: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 1rem; }
+      padding: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .survey__table--comments {
+          padding: 1.5rem .5rem 0;
+          font-size: 80%; } }
       .survey__table--comments > textarea {
         flex: 0 0 75%;
-        border-radius: 10px; }
+        border-radius: 10px;
+        margin-left: .5rem; }
     .survey__table--speakPositively > p {
       margin-bottom: 1.5rem; }
     .survey__table--speakPositively-label {
@@ -329,6 +391,9 @@ body {
       padding: 2px;
       transform: translateY(-4px);
       border-radius: 5px; }
+      @media only screen and (max-width: 26em) {
+        .survey__table--nameOptional > p > input {
+          width: 12rem; } }
     .survey__table--nameOptional > div {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; }
@@ -337,7 +402,6 @@ body {
       height: 15rem;
       border-radius: 10px; }
   .survey__submitContainer {
-    padding-bottom: 2rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -356,7 +420,7 @@ body {
       padding: 1rem 1.5rem;
       font-size: 80%;
       font-weight: 400;
-      width: 26%;
+      width: 30%;
       margin: 0 auto 1.5rem;
       border-radius: 15px;
       transform: translateY(-4px);
@@ -366,4 +430,14 @@ body {
       .survey__submitContainer--response-success {
         background-color: #46b1e2; }
       .survey__submitContainer--response-fail {
-        background-color: #fbff00; }
+        background-color: #e0e404;
+        color: #333; }
+
+.phoneOnly {
+  display: none;
+  color: #d5d7da;
+  font-size: 80%;
+  margin-right: .5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .phoneOnly {
+      display: block; } }

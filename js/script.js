@@ -2,7 +2,6 @@
 
 "use strict";
 
-function clickMe() {
-    alert("You are communicating with the script.js file");
-    console.log("imin");
-}
+$(document).ready(function () {
+    $(".form-start").html("start");
+});

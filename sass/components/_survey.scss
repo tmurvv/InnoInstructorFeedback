@@ -1,15 +1,18 @@
+//hidden field that JavaScript populates on doc ready. PHP uses for logic
+.formStart {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .survey {
-    background-color: #fcfcfc;
-    //background: linear-gradient(to bottom, #33393b, #ececec 7%, #ececec 100%);
+    background-color: #fcfcfc; //background: linear-gradient(to bottom, #33393b, #ececec 7%, #ececec 100%);
     width: 100%;
     &__headingContainer {
-        
         &--heading {
             padding-top: 4rem;
             font-size: 240%;
             font-weight: 400;
             text-align: center;
-            
             &:after {
                 display: block;
                 height: 2px;
@@ -29,13 +32,19 @@
     &__table {
         width: 100%;
         padding: 2rem;
-        margin-bottom: 4rem;
+        @include respond(phone) {
+            padding: 1rem;
+        }
+        margin-bottom: 2rem;
         display: flex;
         flex-flow: column;
         border: 7px double $colorPrimary-light;
         border-radius: 10px;
         &--row {
             display: flex;
+            @include respond(portrait) {
+                flex-flow: column;
+            }
             flex: 0 0 50%;
             justify-content: space-between;
             &:not(:last-child) {
@@ -52,18 +61,24 @@
                         padding: 0;
                         padding-right: .5rem;
                     }
-
-                    
-
                     font-size: 87%;
+                    @include respond(phone) {
+                        font-size: 65%;
+                    }
                     &Ins {
                         color: $colorPrimary;
                         font-weight: 600;
                         letter-spacing: 8.7px;
                         font-size: 140%;
-                        
                         @include respond(portrait) {
-                            letter-spacing: 3.7;
+                            letter-spacing: 3.7px;
+                        }
+                        @include respond(phone) {
+                            letter-spacing: 3.7px;
+                        }
+                        @include respond(smallPhone) {
+                            letter-spacing: 3.0px;
+                            font-size: 100%;
                         }
                     }
                 }
@@ -72,25 +87,41 @@
         &--col,
         &--colHeading {
             flex: 0 0 15%;
+            @include respond(portrait) {
+                flex: 0 0 25%;
+            }
+            @include respond(phone) {
+                flex: 0 0 36%;
+            }
+            @include respond(smallPhone) {
+                flex: 0 0 45%;
+            }
             border-left: 1px solid $colorPrimary-light;
             padding: 4px;
             &>input {
-                transform: translateY(-4px);
                 border-radius: 5px;
+                height: 1.5rem;
+                width: 100%;
             }
         }
         &--col {
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &>input {
-                width: 2.5rem;
-                height: 100%;
+                width: 2rem;
+                height: 2rem;
                 border: 1px solid $colorGrey-light3;
+                text-align: center;
             }
         }
         &--colHeading {
             &>input {
                 width: 100%;
-                height: 100%;
+                @include respond(portrait) {
+                    width: 15rem;
+                }
+                height: 1.5rem;
             }
         }
         &--comments {
@@ -98,10 +129,15 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 1rem;
+            padding: 2rem;
+            @include respond(phone) {
+                padding: 1.5rem .5rem 0;
+                font-size: 80%;
+            }
             &>textarea {
                 flex: 0 0 75%;
                 border-radius: 10px;
+                margin-left: .5rem;
             }
         }
         &--speakPositively {
@@ -120,6 +156,9 @@
                 margin-left: 1rem;
                 height: 1.5rem;
                 width: 15rem;
+                @include respond(smallPhone) {
+                    width: 12rem;
+                }
                 padding: 2px;
                 transform: translateY(-4px);
                 border-radius: 5px;
@@ -135,42 +174,56 @@
             }
         }
     }
-    &__submitContainer {
-        padding-bottom: 2rem;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        &--btn {
-            background-color: $colorPrimary;
-            height: 3rem;
-            padding: .5rem 1rem;
-            font-size: 140%;
-            border-radius: 15px;
-            letter-spacing: 1.3px;
-            color: #fff;
-            &:hover,
-            &:active {
-                transform: scale(1.05);
+        &__submitContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            &--btn {
+                background-color: $colorPrimary;
+                height: 3rem;
+                padding: .5rem 1rem;
+                font-size: 140%;
+                border-radius: 15px;
+                letter-spacing: 1.3px;
+                color: #fff;
+                &:hover,
+                &:active {
+                    transform: scale(1.05);
+                }
             }
-        }
-        &--response {
-            padding: 1rem 1.5rem;
-            font-size: 80%;
-            font-weight: 400;
-            width: 26%;
-            margin: 0 auto 1.5rem;
-            border-radius: 15px;
-            transform: translateY(-4px);
-            color: #fff;
-            border: 2px outset buttonface;
-            border-image: initial;
-            &-success {
-                background-color: $colorPrimary-light;
-            }
-            &-fail {
-                background-color: $colorSecondary;
+            &--response {
+                padding: 1rem 1.5rem;
+                font-size: 80%;
+                font-weight: 400;
+                width: 30%;
+                @include respond(phone) {
+                    width: 80%;
+                }
+                margin: 0 auto 1.5rem;
+                border-radius: 15px;
+                transform: translateY(-4px);
+                color: #fff;
+                border: 2px outset buttonface;
+                border-image: initial;
+                &-success {
+                    background-color: $colorPrimary-light;
+                }
+                &-fail {
+                    background-color: $colorSecondary;
+                    color: #333;
+                }
             }
         }
     }
+
+
+.phoneOnly {
+    display: none;
+    @include respond(portrait) {
+        display: block;
+    }
+    color: #d5d7da;
+    font-size: 80%;
+    margin-right: .5rem;
 }

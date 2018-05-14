@@ -21,11 +21,21 @@
         margin-top: 1.5rem;
         flex: 0 0 1;
         display: flex;
+        @include respond(phone) {
+         flex-flow: column;
+        }
         list-style: none;
 
         &-item {
           margin: 0 2rem;
           color: $colorGrey-light3;
+
+          @include respond(phone) {
+            &:last-child {
+              display: none;
+            }
+          }
+          
         }
       }
     }
