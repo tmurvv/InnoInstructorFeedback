@@ -20,6 +20,10 @@
 //Media query max-width settings do not refer to rems. 
 //We use ems in order to account for changes user has made in default settings
 @mixin respond($breakpoint) {  //1em=16px, formula (max or min-screen width) / 16px = ??ems
+
+    @if $breakpoint == smallPhone {
+        @media only screen and (max-width: 26em) { @content }; //600px  417px/16px (1em) = 26em
+    }
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content }; //600px  600px/16px (1em) = 37.5em
     }

@@ -291,10 +291,10 @@
 
                 <!-- <div class="survey__submitContainer--response survey__submitContainer--response-fail"><img class="alert-image" src="../img/alert.jpg">Please fill in the first instructor name box. If not evaluating an instructor, enter 'n/a'.</div>                    -->
 
-            <div class="survey__table">
+            <div class="survey__table non-phone">
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading survey__table--rowHeading-row1">
-                        <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Instructors<p><p>1=poor, 10=excellent</p>
+                        <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Instructor<p><p>1=poor, 10=excellent</p>
                     </div>
                     <div class="survey__table--colHeading"><input type="text" name="instructor1" value="<?php echo $instructor1;?>" placeholder="Instructor Name"></div>
                     <div class="survey__table--colHeading"><input type="text" name="instructor2" value="<?php echo $instructor2;?>" placeholder="Instructor Name"></div>
@@ -360,7 +360,7 @@
                 </div>
             </div>
 
-            <div class="survey__table">
+            <div class="survey__table non-phone">
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading survey__table--rowHeading-row1">
                         <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Staff<p><p>1=poor, 10=excellent</p>
@@ -402,6 +402,246 @@
                 <div class="survey__table--comments">
                     <label for="additionalStaffComments">Additional Staff Comments:</label>
                     <textarea name="additionalStaffComments" placeholder="Please specify staff name if necessary"><?php echo $additionalStaffComments;?></textarea>
+                </div>
+            </div>
+
+                
+            <!-- This area for responsive phone view -->
+
+            <!-- Instructors Col 1 -->
+
+            <div class="survey__table phone-only">
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading survey__table--rowHeading-row1">
+                            <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Instructors<p><p>1=poor, 10=excellent</p>
+                        </div>
+                        <div class="survey__table--colHeading"><input type="text" name="instructor1" value="<?php echo $instructor1;?>" placeholder="Instructor Name"></div>
+                       </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading"> Was well prepared</div>
+                        <div class="survey__table--col"><input type="text" name="prepared1" value="<?php echo $prepared1;?>"></div>
+                       </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Was knowledgable</div>
+                        <div class="survey__table--col"><input type="text" name="knowledgable1" value="<?php echo $knowledgable1;?>"></div>
+                       </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Communicated clearly & effectively</div>
+                        <div class="survey__table--col"><input type="text" name="communicated1" value="<?php echo $communicated1;?>"></div>
+                        </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Used time efficiently</div>
+                        <div class="survey__table--col"><input type="text" name="time1" value="<?php echo $time1;?>"></div>
+                        </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Created a fun learning environment</div>
+                        <div class="survey__table--col"><input type="text" name="fun1" value="<?php echo $fun1;?>"></div>
+                        </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Provided positive and constructive feedback to students</div>
+                        <div class="survey__table--col"><input type="text" name="feedback1" value="<?php echo $feedback1;?>"></div>
+                       </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Was open to student feedback & suggestions	</div>
+                        <div class="survey__table--col"><input type="text" name="open1" value="<?php echo $open1;?>"></div>
+                        </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Treated students with respect</div>
+                        <div class="survey__table--col"><input type="text" name="respect1" value="<?php echo $respect1;?>"></div>
+                        </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Overall Instructor’s Performance (out of 10)</div>
+                        <div class="survey__table--col"><input type="text" name="overall1" value="<?php echo $overall1;?>"></div>
+                        </div>
+                </div>
+
+            <!-- Instructors Col 2 -->
+
+            <div class="survey__table phone-only">
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading survey__table--rowHeading-row1">
+                            <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Instructors<p><p>1=poor, 10=excellent</p>
+                        </div>
+                        <div class="survey__table--colHeading"><input type="text" name="instructor2" value="<?php echo $instructor2;?>" placeholder="Instructor Name"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading"> Was well prepared</div>
+                        <div class="survey__table--col"><input type="text" name="prepared2" value="<?php echo $prepared2;?>"></div>
+                        </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Was knowledgable</div>
+                        <div class="survey__table--col"><input type="text" name="knowledgable2" value="<?php echo $knowledgable2;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Communicated clearly & effectively</div>
+                        <div class="survey__table--col"><input type="text" name="communicated2" value="<?php echo $communicated2;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Used time efficiently</div>
+                        <div class="survey__table--col"><input type="text" name="time2" value="<?php echo $time2;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Created a fun learning environment</div>
+                        <div class="survey__table--col"><input type="text" name="fun2" value="<?php echo $fun2;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Provided positive and constructive feedback to students</div>
+                        <div class="survey__table--col"><input type="text" name="feedback2" value="<?php echo $feedback2;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Was open to student feedback & suggestions	</div>
+                       <div class="survey__table--col"><input type="text" name="open2" value="<?php echo $open2;?>"></div>
+                       </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Treated students with respect</div>
+                        <div class="survey__table--col"><input type="text" name="respect2" value="<?php echo $respect2;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Overall Instructor’s Performance (out of 10)</div>
+                        <div class="survey__table--col"><input type="text" name="overall2" value="<?php echo $overall2;?>"></div>
+                    </div>
+                </div>
+
+            <!-- Instructors Col 3 -->
+
+            <div class="survey__table phone-only">
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading survey__table--rowHeading-row1">
+                            <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Instructors<p><p>1=poor, 10=excellent</p>
+                        </div>
+                       <div class="survey__table--colHeading"><input type="text" name="instructor3" value="<?php echo $instructor3;?>" placeholder="Instructor Name"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading"> Was well prepared</div>
+                         <div class="survey__table--col"><input type="text" name="prepared3" value="<?php echo $prepared3;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Was knowledgable</div>
+                        <div class="survey__table--col"><input type="text" name="knowledgable3" value="<?php echo $knowledgable3;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Communicated clearly & effectively</div>
+                        <div class="survey__table--col"><input type="text" name="communicated3" value="<?php echo $communicated3;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Used time efficiently</div>
+                        <div class="survey__table--col"><input type="text" name="time3" value="<?php echo $time3;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Created a fun learning environment</div>
+                       <div class="survey__table--col"><input type="text" name="fun3" value="<?php echo $fun3;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Provided positive and constructive feedback to students</div>
+                       <div class="survey__table--col"><input type="text" name="feedback3" value="<?php echo $feedback3;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Was open to student feedback & suggestions	</div>
+                        <div class="survey__table--col"><input type="text" name="open3" value="<?php echo $open3;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Treated students with respect</div>
+                        <div class="survey__table--col"><input type="text" name="respect3" value="<?php echo $respect3;?>"></div>
+                    </div>
+                    <div class="survey__table--row">
+                        <div class="survey__table--rowHeading">Overall Instructor’s Performance (out of 10)</div>
+                        <div class="survey__table--col"><input type="text" name="overall3" value="<?php echo $overall3;?>"></div>
+                    </div>
+                    <div class="survey__table--comments">
+                        <label for="instructorComments">Additional Instructor Comments:</label>
+                        <textarea name="additionalInstructorComments" placeholder="Please specify instructor name if necessary"><?php echo $additionalInstructorComments;?></textarea>
+                    </div>
+                </div>
+
+            <!-- staff col 1 -->
+            <div class="survey__table phone-only">
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading survey__table--rowHeading-row1">
+                        <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Staff<p><p>1=poor, 10=excellent</p>
+                    </div>
+                    <div class="survey__table--colHeading"><input type="text" name="staff1" placeholder="Staff Name" value="<?php echo $staff1;?>"></div>
+                    </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Was knowledgeable & helpful</div>
+                    <div class="survey__table--col"><input type="text" name="knowledgableStaff1" value="<?php echo $knowledgableStaff1;?>"></div>
+                    </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Was available & approachable</div>
+                    <div class="survey__table--col"><input type="text" name="availableStaff1" value="<?php echo $availableStaff1;?>"></div>
+                    </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Communicated promptly, clearly & effectively</div>
+                    <div class="survey__table--col"><input type="text" name="timelyStaff1" value="<?php echo $timelyStaff1;?>"></div>
+                    </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Shared useful solutions & resources for any inquiries</div>
+                    <div class="survey__table--col"><input type="text" name="usefulStaff1" value="<?php echo $usefulStaff1;?>"></div>
+                    </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Treated students with respect</div>
+                    <div class="survey__table--col"><input type="text" name="respectfulStaff1" value="<?php echo $respectfulStaff1;?>"></div>
+                </div>
+            </div>
+
+            <!-- Staff Col 2 -->
+
+            <div class="survey__table phone-only">
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading survey__table--rowHeading-row1">
+                        <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Staff<p><p>1=poor, 10=excellent</p>
+                    </div>
+                    <div class="survey__table--colHeading"><input type="text" name="staff2" placeholder="Staff Name" value="<?php echo $staff2;?>"></div>
+                    </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Was knowledgeable & helpful</div>
+                    <div class="survey__table--col"><input type="text" name="knowledgableStaff2" value="<?php echo $knowledgableStaff2;?>"></div>
+                    </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Was available & approachable</div>
+                    <div class="survey__table--col"><input type="text" name="availableStaff2" value="<?php echo $availableStaff2;?>"></div>
+                    </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Communicated promptly, clearly & effectively</div>
+                    <div class="survey__table--col"><input type="text" name="timelyStaff2" value="<?php echo $timelyStaff2;?>"></div>
+                    </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Shared useful solutions & resources for any inquiries</div>
+                    <div class="survey__table--col"><input type="text" name="usefulStaff2" value="<?php echo $usefulStaff2;?>"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Treated students with respect</div>
+                    <div class="survey__table--col"><input type="text" name="respectfulStaff2" value="<?php echo $respectfulStaff2;?>"></div>
+                </div>
+            </div>
+
+            <!-- Staff Col 3 -->
+
+            <div class="survey__table phone-only">
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading survey__table--rowHeading-row1">
+                        <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Staff<p><p>1=poor, 10=excellent</p>
+                    </div>
+                    <div class="survey__table--colHeading"><input type="text" name="staff3" placeholder="Staff Name" value="<?php echo $staff3;?>"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Was knowledgeable & helpful</div>
+                    <div class="survey__table--col"><input type="text" name="knowledgableStaff3" value="<?php echo $knowledgableStaff3;?>"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Was available & approachable</div>
+                    <div class="survey__table--col"><input type="text" name="availableStaff3" value="<?php echo $availableStaff3;?>"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Communicated promptly, clearly & effectively</div>
+                    <div class="survey__table--col"><input type="text" name="timelyStaff3" value="<?php echo $timelyStaff3;?>"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Shared useful solutions & resources for any inquiries</div>
+                    <div class="survey__table--col"><input type="text" name="usefulStaff3" value="<?php echo $usefulStaff3;?>"></div>
+                </div>
+                <div class="survey__table--row">
+                    <div class="survey__table--rowHeading">Treated students with respect</div>
+                    <div class="survey__table--col"><input type="text" name="respectfulStaff3" value="<?php echo $respectfulStaff3;?>"></div>
                 </div>
             </div>
             <div class="survey__table">

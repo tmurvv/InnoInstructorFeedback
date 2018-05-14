@@ -1,3 +1,5 @@
+
+
 .survey {
     background-color: #fcfcfc;
     //background: linear-gradient(to bottom, #33393b, #ececec 7%, #ececec 100%);
@@ -29,6 +31,9 @@
     &__table {
         width: 100%;
         padding: 2rem;
+        @include respond(phone) {
+            padding: 1rem;
+        }
         margin-bottom: 4rem;
         display: flex;
         flex-flow: column;
@@ -43,6 +48,11 @@
             }
             &Heading {
                 flex: 0 0 55%;
+                
+                @include respond(portrait) {
+                    //flex: none;
+                }
+
                 &-row1 {
                     display: flex;
                     justify-content: space-between;
@@ -53,17 +63,27 @@
                         padding-right: .5rem;
                     }
 
-                    
-
                     font-size: 87%;
+
+                    
+                    @include respond(phone) {
+                        font-size: 65%;
+                    }
                     &Ins {
                         color: $colorPrimary;
                         font-weight: 600;
                         letter-spacing: 8.7px;
                         font-size: 140%;
-                        
+                  
                         @include respond(portrait) {
-                            letter-spacing: 3.7;
+                            letter-spacing: 3.7px;
+                        }
+                        @include respond(phone) {
+                            letter-spacing: 3.7px;
+                        }
+                        @include respond(smallPhone) {
+                            letter-spacing: 3.0px;
+                            font-size: 100%;
                         }
                     }
                 }
@@ -72,18 +92,29 @@
         &--col,
         &--colHeading {
             flex: 0 0 15%;
+
+            @include respond(portrait) {
+                flex: 0 0 25%;
+            }
+            @include respond(phone) {
+                flex: 0 0 36%;
+            }
+            @include respond(smallPhone) {
+                flex: 0 0 45%;
+            }
             border-left: 1px solid $colorPrimary-light;
             padding: 4px;
             &>input {
-                transform: translateY(-4px);
+                
                 border-radius: 5px;
             }
         }
         &--col {
             text-align: center;
+
             &>input {
-                width: 2.5rem;
-                height: 100%;
+                width: 2rem;
+                height: 2rem;
                 border: 1px solid $colorGrey-light3;
             }
         }
@@ -98,10 +129,17 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 1rem;
+            padding: 2rem;
+
+            @include respond(phone) {
+                padding: 1.5rem .5rem 0;
+                font-size: 80%;
+              }
+
             &>textarea {
                 flex: 0 0 75%;
                 border-radius: 10px;
+                margin-left: .5rem;
             }
         }
         &--speakPositively {
@@ -120,6 +158,9 @@
                 margin-left: 1rem;
                 height: 1.5rem;
                 width: 15rem;
+                @include respond(smallPhone) {
+                    width: 12rem;
+                }
                 padding: 2px;
                 transform: translateY(-4px);
                 border-radius: 5px;
@@ -172,5 +213,20 @@
                 background-color: $colorSecondary;
             }
         }
+    }
+}
+
+.phone-only {
+    display: none; //will be diplay none;
+    @include respond(portrait) {
+        display: flex;
+    }
+}
+
+.non-phone {
+    display: block;
+
+    @include respond(portrait) {
+        display: none;
     }
 }

@@ -7,6 +7,10 @@
         @include respond(landscape) {
             left: 36%;
         }
+        @include respond(portrait) {
+            left: 50%;
+            width: 100%;
+        }
         transform: translate(-50%, -50%);
 
         &--mainText,
@@ -21,10 +25,16 @@
             @include respond(landscape) {
                 font-size: 130%;
             }
+            @include respond(phone) {
+                font-size: 95%;
+            }
         }
         &--subText {
             font-size: 280%;
             @include respond(landscape) {
+                font-size: 208%;
+            }
+            @include respond(125%) {
                 font-size: 208%;
             }
         }
