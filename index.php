@@ -163,79 +163,20 @@
 
             $additionalStaffComments = trim($_POST["additionalStaffComments"]);
 
-            //Final comments section
-
-
             $overallRating = strip_tags(trim($_POST["overallRating"]));
-            $overallRating = str_replace(array("\r","\n"),array(" "," "),$overallRating);
-
-            // $overallRating1 = strip_tags(trim($_POST["overalRating1"]));
-            // $overallRating2 = str_replace(array("\r","\n"),array(" "," "),$overalRating1);
-            // $overallRating1 = strip_tags(trim($_POST["overalRating2"]));            
-            // $overallRating2 = str_replace(array("\r","\n"),array(" "," "),$overalRating2);
-            // $overallRating3 = strip_tags(trim($_POST["overalRating3"]));
-            // $overallRating3 = str_replace(array("\r","\n"),array(" "," "),$overalRating3);
-            // $overallRating4 = strip_tags(trim($_POST["overalRating4"]));
-            // $overallRating4 = str_replace(array("\r","\n"),array(" "," "),$overalRating4);
-            // $overallRating5 = strip_tags(trim($_POST["overalRating5"]));
-            // $overallRating5 = str_replace(array("\r","\n"),array(" "," "),$overalRating5);
-            // $overallRating6 = strip_tags(trim($_POST["overalRating6"]));
-            // $overallRating6 = str_replace(array("\r","\n"),array(" "," "),$overalRating6);
-            // $overallRating7 = strip_tags(trim($_POST["overalRating7"]));
-            // $overallRating7 = str_replace(array("\r","\n"),array(" "," "),$overalRating7);
-            // $overallRating8 = strip_tags(trim($_POST["overalRating8"]));
-            // $overallRating8 = str_replace(array("\r","\n"),array(" "," "),$overalRating8);
-            // $overallRating9 = strip_tags(trim($_POST["overalRating9"]));
-            // $overallRating9 = str_replace(array("\r","\n"),array(" "," "),$overalRating9);
-            // $overallRating10 = strip_tags(trim($_POST["overalRatin101"]));
-            // $overallRating10 = str_replace(array("\r","\n"),array(" "," "),$overalRating10);
-
-            $speakPosOthers = "";
-            echo $overallRating1;
-            if (isset($overallRating1) || $overallRating1 = "1") {
-              
-                $speakPosOthers = "1";
-            }
-            if (isset($overallRating2) && $overallRating = "2") {
-                $speakPosOthers = "2";
-            }
-            // if (isset($overallRating3)) {
-            //     $speakPosOthers = "3";
-            // }
-            // if (isset($overallRating4)) {
-            //     $speakPosOthers = "4";
-            // }
-            // if (isset($overallRating5)) {
-            //     $speakPosOthers = "5";
-            // }
-            // if (isset($overallRating6)) {
-            //     $speakPosOthers = "6";
-            // }
-            // if (isset($overallRating7)) {
-            //     $speakPosOthers = "7";
-            // }
-            // if (isset($overallRating8)) {
-            //     $speakPosOthers = "8";
-            // }
-            // if (isset($overallRating9)) {
-            //     $speakPosOthers = "9";
-            // }
-            // if (isset($overallRating10)) {
-            //     $speakPosOthers = "10";
-            // }
+            $overallRating = str_replace(array("\r","\n"),array(" "," "),$overallRating);           
             
             $nameOptional = strip_tags(trim($_POST["nameOptional"]));
             $nameOptional = str_replace(array("\r","\n"),array(" "," "),$nameOptional);
             $finalComments = trim($_POST["finalComments"]);
 
             // Set the recipient email address. Update this to YOUR desired email address.
-            $recipient = "tmurv@shaw.ca";
+            $recipient = "info@innotechcollege.com";
 
             //for Testing
             $name = "Inno Student";
             $email = "info@innotechcollege.com";
             $notifytake2tech = "tmurv@shaw.ca";
-            $copytake2tech = "tmurv@shaw.ca";
 
             // Set the email subject.
             $subject = "Final Feedback Form";
@@ -304,15 +245,15 @@
 
             //build email content final section
             $email_content .= "\n--------------------\n\nClosing Section\n";   
-            $email_content .= "\n--------------------\n\nWould you speak positively about this program to others (1 to 10): $speakPosOthers\n";
+            $email_content .= "\n--------------------\n\nWould you speak positively about this program to others (1 to 10): $overallRating\n";
             $email_content .= "\nStudent Name (Optional): $nameOptional\n";   
             $email_content .= "\nAny Other Addtional Comments About the Program:\n\n$finalComments";
 
-            $notify_content = "This is a notification to take2tech.ca. A Final Feedback survey has been sent to InnoTech College.";
+            $notify_content = "This is a notification to the webmaster at take2tech.ca. A Final Feedback survey has been sent to InnoTech College.";
 
             // Build the email headers.
             $email_headers = "From: 'InnoTech Student' <'tech@take2tech.ca'>";
-            //mail($recipient, $subject, $email_content, $email_headers);
+            
             // Send the email.
             if (isset($_POST["formStart"])) {
                 
@@ -323,7 +264,7 @@
 
                     //Notify webmaster
                     mail($notifytake2tech, $subject, $notify_content, $email_headers);
-                    mail($copytake2tech, $subject, $notify_content, $email_headers); //for testing only
+
 
                     //Reset input variables to ""
                     $instructor1 = $prepared1 = $knowledgable1 = $communicated1 = $time1 = $fun1 = $feedback1 = $open1 = $respect1 = $overall1 = "";
@@ -336,7 +277,7 @@
                     $staff3 = $knowledgableStaff3 = $availableStaff3 = $timelyStaff3 = $usefulStaff3 = $respectfulStaff3 = "";
                     $additionalStaffComments = "";
 
-                    $speakPosOthers = $nameOptional = $finalComments = "";               
+                    $overallRating = $nameOptional = $finalComments = "";               
                 } 
                 else {
                     echo '<div class="survey__submitContainer--response survey__submitContainer--response-fail">Oops... something went wrong.</div>';
@@ -422,9 +363,9 @@
                     <div class="survey__table--rowHeading survey__table--rowHeading-row1">
                         <p class="survey__table--rowHeading survey__table--rowHeading-row1Ins">Staff<p><p>1=poor, 10=excellent</p>
                     </div>
-                    <div class="survey__table--colHeading"><input type="text" name="staff1" placeholder="Staff Name" value="<?php echo $staff1;?>"></div>
-                    <div class="survey__table--colHeading"><input type="text" name="staff2" placeholder="Staff Name" value="<?php echo $staff2;?>"></div>
-                    <div class="survey__table--colHeading"><input type="text" name="staff3" placeholder="Staff Name" value="<?php echo $staff3;?>"></div>
+                    <div class="survey__table--colHeading"><input type="text" name="staff1" placeholder="Staff 1 Name" value="<?php echo $staff1;?>"></div>
+                    <div class="survey__table--colHeading"><input type="text" name="staff2" placeholder="Staff 2 Name" value="<?php echo $staff2;?>"></div>
+                    <div class="survey__table--colHeading"><input type="text" name="staff3" placeholder="Staff 3 Name" value="<?php echo $staff3;?>"></div>
                 </div>
                 <div class="survey__table--row">
                     <div class="survey__table--rowHeading">Was knowledgeable & helpful</div>
@@ -465,18 +406,18 @@
             <div class="survey__table">
                 
                 <div class="survey__table--speakPositively">
-                    <p>Would you speak positively about this program to others <strong>(select)</strong>?</p>
+                    <p>Would you speak positively about this program to others <strong>(select)</strong>?</p> 
                     <div class="container">                                            
-                        <input type="radio" name="overallRating" class="box" id="rating10" value="10"><p class="num">10</p>
-                        <input type="radio" name="overallRating" class="box" id="rating9" value="9"><p class="num">9</p>
-                        <input type="radio" name="overallRating" class="box" id="rating8" value="8"><p class="num">8</p>
-                        <input type="radio" name="overallRating" class="box" id="rating7" value="7"><p class="num">7</p>
-                        <input type="radio" name="overallRating" class="box" id="rating6" value="6"><p class="num">6</p>
-                        <input type="radio" name="overallRating" class="box" id="rating5" value="5"><p class="num">5</p>
-                        <input type="radio" name="overallRating" class="box" id="rating4" value="4"><p class="num">4</p>
-                        <input type="radio" name="overallRating" class="box" id="rating3" value="3"><p class="num">3</p>
-                        <input type="radio" name="overallRating" class="box" id="rating2" value="2"><p class="num">2</p>
-                        <input type="radio" name="overallRating" class="box" id="rating1" value="1"><p class="num">1</p>
+                        <input type="radio" name="overallRating" class="box" id="rating10" value="10" <?php if (isset($overallRating) && $overallRating=="10") echo "checked";?>><p class="num">10</p>
+                        <input type="radio" name="overallRating" class="box" id="rating9" value="9" <?php if (isset($overallRating) && $overallRating=="9") echo "checked";?>><p class="num">9</p>
+                        <input type="radio" name="overallRating" class="box" id="rating8" value="8" <?php if (isset($overallRating) && $overallRating=="8") echo "checked";?>><p class="num">8</p>
+                        <input type="radio" name="overallRating" class="box" id="rating7" value="7" <?php if (isset($overallRating) && $overallRating=="7") echo "checked";?>><p class="num">7</p>
+                        <input type="radio" name="overallRating" class="box" id="rating6" value="6" <?php if (isset($overallRating) && $overallRating=="6") echo "checked";?>><p class="num">6</p>
+                        <input type="radio" name="overallRating" class="box" id="rating5" value="5" <?php if (isset($overallRating) && $overallRating=="5") echo "checked";?>><p class="num">5</p>
+                        <input type="radio" name="overallRating" class="box" id="rating4" value="4" <?php if (isset($overallRating) && $overallRating=="4") echo "checked";?>><p class="num">4</p>
+                        <input type="radio" name="overallRating" class="box" id="rating3" value="3" <?php if (isset($overallRating) && $overallRating=="3") echo "checked";?>><p class="num">3</p>
+                        <input type="radio" name="overallRating" class="box" id="rating2" value="2" <?php if (isset($overallRating) && $overallRating=="2") echo "checked";?>><p class="num">2</p>
+                        <input type="radio" name="overallRating" class="box" id="rating1" value="1" <?php if (isset($overallRating) && $overallRating=="1") echo "checked";?>><p class="num">1</p>
                     </div>
                     <div class="survey__table--speakPositively-label">
                         <div>Yes, most definitely!</div>

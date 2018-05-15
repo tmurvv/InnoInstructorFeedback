@@ -1,2 +1,3 @@
 notify email going to tmurv@shaw.ca
 
+cleaning the php variables needs to be refactored to a function
